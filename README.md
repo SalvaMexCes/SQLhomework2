@@ -38,7 +38,23 @@ mysql> SELECT COUNT(*)
 1 row in set (0.02 sec)
 
 
+
+
+
+
 *** Find out what the population and average life expectancy for people in Argentina (ARG) is! ***
+
+mysql> SELECT Population, LifeExpectancy
+    -> FROM Country
+    -> WHERE code = 'ARG';
++------------+----------------+
+| Population | LifeExpectancy |
++------------+----------------+
+|   37032000 |           75.1 |
++------------+----------------+
+1 row in set (0.00 sec)
+
+
 
 
 
