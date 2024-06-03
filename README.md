@@ -108,3 +108,27 @@ mysql> SELECT Name AS countryName, population
 | Brazil        |  170115000 |
 +---------------+------------+
 5 rows in set (0.02 sec)
+
+
+
+
+mysql> SELECT name, population
+    -> FROM country
+    -> WHERE population < 6000000
+    -> ORDER BY population DESC
+    -> LIMIT 10;
++------------------------+------------+
+| name                   | population |
++------------------------+------------+
+| Libyan Arab Jamahiriya |    5605000 |
+| Paraguay               |    5496000 |
+| Laos                   |    5433000 |
+| Slovakia               |    5398700 |
+| Denmark                |    5330000 |
+| Finland                |    5171300 |
+| Jordan                 |    5083000 |
+| Nicaragua              |    5074000 |
+| Georgia                |    4968000 |
+| Sierra Leone           |    4854000 |
++------------------------+------------+
+10 rows in set (0.00 sec)
