@@ -94,4 +94,17 @@ mysql> SELECT City.Name
 
 *** Come up with two more queries of your own. ***
 
-
+mysql> SELECT Name AS countryName, population
+    -> FROM country
+    -> ORDER BY population DESC
+    -> LIMIT 5;
++---------------+------------+
+| countryName   | population |
++---------------+------------+
+| China         | 1277558000 |
+| India         | 1013662000 |
+| United States |  278357000 |
+| Indonesia     |  212107000 |
+| Brazil        |  170115000 |
++---------------+------------+
+5 rows in set (0.02 sec)
