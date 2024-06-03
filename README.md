@@ -2,6 +2,7 @@
 
 *** Using count, get the number of cities in the USA ***
 
+
 mysql> use world;
 Database changed
 mysql> show tables;
@@ -42,7 +43,11 @@ mysql> SELECT COUNT(*)
 
 
 
+
+
+
 *** Find out what the population and average life expectancy for people in Argentina (ARG) is! ***
+
 
 mysql> SELECT Population, LifeExpectancy
     -> FROM Country
@@ -59,7 +64,30 @@ mysql> SELECT Population, LifeExpectancy
 
 
 
+
+
+
 *** Display all the cities for any country of your choice besides the USA ***
+
+
+mysql> SELECT City.Name
+    -> FROM City
+    -> JOIN Country ON City.CountryCode = country.code
+    -> WHERE country.name = 'El Salvador';
++--------------------+
+| Name               |
++--------------------+
+| San Salvador       |
+| Santa Ana          |
+| Mejicanos          |
+| Soyapango          |
+| San Miguel         |
+| Nueva San Salvador |
+| Apopa              |
++--------------------+
+7 rows in set (0.01 sec)
+
+
 
 
 
@@ -67,6 +95,3 @@ mysql> SELECT Population, LifeExpectancy
 *** Come up with two more queries of your own. ***
 
 
-
-
-*** Add all your queries to the readme file ***
